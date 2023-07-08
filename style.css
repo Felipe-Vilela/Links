@@ -176,11 +176,13 @@ footer {
     --bg-url: url(./assets/bg-desktop-light.jpg);
   }
 
+}
+
+@media(min-heigth: 1000px){
   #switch button:hover {
     outline: 8px solid var(--social-links-and-switch-background)  ;
     
   }
-
 }
 
 /*Animation*/
