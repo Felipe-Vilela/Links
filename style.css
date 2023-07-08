@@ -8,7 +8,7 @@
 
 :root {
   --text-color: white;
-  --bg-url: url(./assets/bg-desktop-dark.jpg);
+  --bg-url: url(./assets/bg-mobile-dark.jpg);
   --button-border-color: rgba(255, 255, 255, 0.5); /*strokecolor*/
   --button-background-color: rgba(255, 255, 255, 0.1); /*surfacecolor*/
   --button-background-color-hover: rgba(255, 255, 255, 0.05);
@@ -18,7 +18,7 @@
 
 .ligth {
   --text-color: black;
-  --bg-url: url(./assets/bg-desktop-light.jpg);
+  --bg-url: url(./assets/bg-mobile-light.jpg);
   --button-border-color: rgba(0, 0, 0, 0.5);
   --button-background-color: rgba(0, 0, 0, 0.05);
   --button-background-color-hover: rgba(0, 0, 0, 0.02);
@@ -33,6 +33,7 @@ body * {
 
 body {
   background-image: var(--bg-url);
+  height: 100vh; /*Responsividade altura total do dispositivo*/
 
   background-repeat: no-repeat;
   background-position: top center;
@@ -161,4 +162,17 @@ footer {
   padding: 24px 0;
   text-align: center;
   font-size: 14px;
+}
+
+/* media queries "Responsividade" */
+
+@media(min-width: 700px){
+  :root{
+    --bg-url: url(./assets/bg-desktop-dark.jpg);
+  }
+
+  .ligth{
+    --bg-url: url(./assets/bg-desktop-light.jpg);
+  }
+
 }
