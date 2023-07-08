@@ -12,7 +12,7 @@
   --button-border-color: rgba(255, 255, 255, 0.5); /*strokecolor*/
   --button-background-color: rgba(255, 255, 255, 0.1); /*surfacecolor*/
   --button-background-color-hover: rgba(255, 255, 255, 0.05);
-  --social-links-background: rgba(255, 255, 255, 0.2);
+  --social-links-and-switch-background: rgba(255, 255, 255, 0.2);
   --switch-bg-url: url(./assets/monn-stars.svg);
 }
 
@@ -22,7 +22,7 @@
   --button-border-color: rgba(0, 0, 0, 0.5);
   --button-background-color: rgba(0, 0, 0, 0.05);
   --button-background-color-hover: rgba(0, 0, 0, 0.02);
-  --social-links-background: rgba(0, 0, 0, 0.1);
+  --social-links-and-switch-background: rgba(0, 0, 0, 0.1);
   --switch-bg-url: url(./assets/sun.svg);
 }
 
@@ -88,11 +88,16 @@ body {
   left: 0; /*Sobrepor e alinhar item*/
   z-index: 1; /*Sobrepor e alinhar  item*/
   transform: translateY(-50%); /*Sobrepor e alinhar item*/
+
+  animation: slide-back 0.3s ;
+}
+
+#switch button:hover {
+  outline: 8px solid var(--social-links-and-switch-background)  ;
 }
 
 .ligth #switch button {
-  right: 0;
-  left: initial;
+  animation: slide-in 0.3s forwards;
 }
 
 #switch span {
@@ -155,7 +160,7 @@ ul li a:hover {
 }
 
 #social-links a:hover {
-  background: var(--social-links-background);
+  background: var(--social-links-and-switch-background);
 }
 
 footer {
@@ -175,4 +180,24 @@ footer {
     --bg-url: url(./assets/bg-desktop-light.jpg);
   }
 
+}
+
+/*Animation*/
+
+@keyframes slide-in {
+  from{
+    left:0 ;
+  }
+  to{
+    left: 50%;
+  }
+}
+
+@keyframes slide-back {
+  from{
+    left: 50% ;
+  }
+  to{
+    left: 0;
+  }
 }
