@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --text-color: white;
+  --bg-url: url(./assets/bg-desktop-dark.jpg);
+  --button-border-color: rgba(255, 255, 255, 0.5); /*strokecolor*/
+  --button-background-color: rgba(255, 255, 255, 0.1); /*surfacecolor*/
+  --button-background-color-hover: rgba(255, 255, 255, 0.05);
+  --social-links-background: rgba(255, 255, 255, 0.2);
+  --switch-bg-url: url(./assets/monn-stars.svg);
+}
+
+.ligth {
+  --text-color: black;
+  --bg-url: url(./assets/bg-desktop-light.jpg);
+  --button-border-color: rgba(0, 0, 0, 0.5);
+  --button-background-color: rgba(0, 0, 0, 0.05);
+  --button-background-color-hover: rgba(0, 0, 0, 0.02);
+  --social-links-background: rgba(0, 0, 0, 0.1);
+  --switch-bg-url: url(./assets/sun.svg);
+}
+
+body * {
+  font-family: "Inter", sans-serif;
+  color: var(--text-color);
+}
+
+body {
+  background-image: var(--bg-url);
+
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+
+  /*ATALHO PARA COLOCAR IMAGEM DE FUNDO EM UMA SÓ LINHA 
+  background: url(./assets/Background.png) no-repeat top center / cover; 
+  */
+}
+
+#container {
+  width: 360px;
+  margin: 56px auto 0px;
+  padding: 0 24px;
+}
+/* Profile */
+#profile {
+  text-align: center;
+  padding: 24px;
+}
+
+#profile img {
+  width: 112px;
+}
+
+#profile p {
+  font-weight: 500; /*Peso da fonte */
+  font-size: 16px; /*Tamanho da fonte - 16px não teria necesidade de colocar pos já é padrão nos navegadores*/
+  line-height: 24px; /*Altura da linha*/
+  margin-top: 8px;
+}
+
+/* Switch */
+
+#switch {
+  position: relative; /*Sobrepor e alinhar item*/
+  width: 64px; /*Sobrepor e alinhar item*/
+
+  margin: 4px auto;
+}
+
+#switch button {
+  width: 32px;
+  height: 32px;
+  background: white var(--switch-bg-url) no-repeat center;
+  border: 0;
+  border-radius: 50%;
+
+  position: absolute; /*Sobrepor e alinhar item*/
+  top: 50%; /*Sobrepor e alinhar item*/
+  left: 0; /*Sobrepor e alinhar item*/
+  z-index: 1; /*Sobrepor e alinhar  item*/
+  transform: translateY(-50%); /*Sobrepor e alinhar item*/
+}
+
+.ligth #switch button {
+  right: 0;
+  left: initial;
+}
+
+#switch span {
+  display: block;
+  width: 64px;
+  height: 24px;
+  background: var(--button-background-color);
+  border: 1px solid var(--button-border-color);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 9999px;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px 0;
+}
+
+ul li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 16px 24px;
+
+  background: var(--button-background-color);
+  border: 1px solid var(--button-border-color);
+  border-radius: 8px;
+
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+ul li a:hover {
+  background: var(--button-background-color-hover);
+  border: 1.5px solid var(--text-color);
+}
+
+#social-links {
+  display: flex;
+  justify-content: center;
+  padding: 24px 0;
+  font-size: 24px;
+}
+
+#social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  transition: background 0.2s;
+  border-radius: 50%;
+}
+
+#social-links a:hover {
+  background: var(--social-links-background);
+}
+
+footer {
+  padding: 24px 0;
+  text-align: center;
+  font-size: 14px;
+}
