@@ -15,4 +15,5 @@ function toggleMode() {
    img.setAttribute("src", "./assets/avatar-dark.png")
    img.setAttribute("alt", "Foto Felipe sem sorriso")
   }
+
 }
