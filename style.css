@@ -8,7 +8,7 @@
 
 :root {
   --text-color: white;
-  --bg-url: url(./assets/bg-mobile-dark.jpg);
+  --bg-url: url(./assets/mobile-dark.png);
   --button-border-color: rgba(255, 255, 255, 0.5); /*strokecolor*/
   --button-background-color: rgba(255, 255, 255, 0.1); /*surfacecolor*/
   --button-background-color-hover: rgba(255, 255, 255, 0.05);
@@ -16,9 +16,9 @@
   --switch-bg-url: url(./assets/monn-stars.svg);
 }
 
-.ligth {
+.light {
   --text-color: black;
-  --bg-url: url(./assets/bg-mobile-light.jpg);
+  --bg-url: url(./assets/mobile-light.png);
   --button-border-color: rgba(0, 0, 0, 0.5);
   --button-background-color: rgba(0, 0, 0, 0.05);
   --button-background-color-hover: rgba(0, 0, 0, 0.02);
@@ -92,7 +92,7 @@ body {
   animation: slide-back 0.3s ;
 }
 
-.ligth #switch button {
+.light #switch button {
   animation: slide-in 0.3s forwards;
 }
 
@@ -159,6 +159,9 @@ ul li a:hover {
   background: var(--social-links-and-switch-background);
 }
 
+.citacoes_img{
+  font-size: 11px;
+}
 footer {
   padding: 24px 0;
   text-align: center;
@@ -169,21 +172,22 @@ footer {
 
 @media(min-width: 700px){
   :root{
-    --bg-url: url(./assets/bg-desktop-dark.jpg);
+    --bg-url: url(./assets/desktop-dark.png);
   }
 
-  .ligth{
-    --bg-url: url(./assets/bg-desktop-light.jpg);
+  .light{
+    --bg-url: url(./assets/desktop-light.png);
   }
+
+ 
 
 }
 
 @media(min-heigth: 1000px){
-  #switch button:hover {
-    outline: 8px solid var(--social-links-and-switch-background)  ;
-    
+   #switch button:hover {
+    outline: 8px solid var(--social-links-and-switch-background)  ; /*Para ativar novamente só voltar no lugar, tirei pois deu bug em mobile*/
   }
-}
+} 
 
 /*Animation*/
 
